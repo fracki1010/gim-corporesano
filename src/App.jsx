@@ -1,17 +1,16 @@
-import { Card } from "./component/card"
-import "./styles/card-style.css"
-import cards from "./data/data.js"
 
-  let listCards = cards
+import "./styles/card-style.css"
+import { CardExercise } from "./component/card"
 
 function App() {
   return (
     <>
-      <div>
-        <section className="page card-1-page">
-          <div className="cards">
-          {listCards.map((e) => <Card card={e}></Card>)}
-          </div>
+      <div className=" bg-black flex ">
+        <section className="flex w-full p-5 gap-3 flex-col bg-red-600 ">
+          <CardExercise  title={'CMJ'} ></CardExercise>
+          <CardExercise  title={'CMJ'} ></CardExercise>
+          <CardExercise  title={'CMJ'} ></CardExercise>
+          
         </section>
       </div>
     </>
