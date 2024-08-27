@@ -1,36 +1,11 @@
 
 import "../styles/card-style.css";
 
-const cards = [
-  {
-    name: "summary",
-    total: 21,
-    description: "Due Tasks",
-    footer: "Completed: 13",
-    more: "More Information",
-  },
-  {
-    name: "overdue",
-    total: 17,
-    description: "Projects",
-    footer: "Yesterday: 9",
-    more: "More Information",
-  },
-  {
-    name: "features",
-    total: 38,
-    description: "Proposals",
-    footer: "Implemented: 6",
-    more: "More Information",
-  },
-];
 
-export const Card1 = () => {
+
+export const Card = ({card}) => {
   return (
-    <section className="page card-1-page">
-      <div className="cards">
-        {cards.map((card) => (
-          // eslint-disable-next-line react/jsx-key
+
           <label id={card.name}>
             <input type="checkbox" />
             <div className="card">
@@ -52,8 +27,5 @@ export const Card1 = () => {
               </div>
             </div>
           </label>
-        ))}
-      </div>
-    </section>
   );
 };
